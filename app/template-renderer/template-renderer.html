@@ -1,0 +1,20 @@
+<section ng-controller="TemplateRendererCtrl" class="card">
+  <div class="card-container">
+    <h2>HTML & Interpolation redactor</h2>
+    <form name="templateForm">
+      <textarea ng-model="template"></textarea>
+
+      <br>
+      <hr>
+      <div ng-bind-html="sanitizer.trustAsHtml(template | interpolation: {contact: contact})"></div>
+      <hr>
+      <br>
+
+      <input ng-click="submit()" type="submit" value="Save" />
+    </form>
+
+    <div class="card-actions">
+      <a href="#!/contact-list"> Contact List</a>
+    </div>
+  </div>
+</section>
