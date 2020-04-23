@@ -1,0 +1,63 @@
+<section ng-controller="ContactDetailCtrl" class="card">
+  <div class="card-container">
+    <h2>Create contact</h2>
+    <form name="addContact">
+      <div class="g-field">
+        <label>First name</label>
+        <input ng-required="true"
+               ng-maxlength="50"
+               name="first_name"
+               type="text" ng-model="contact.first_name" />
+        <validator field="addContact.first_name"></validator>
+      </div>
+
+      <div class="g-field">
+        <label>Last name</label>
+        <input ng-required="true"
+               ng-maxlength="50"
+               name="last_name"
+               type="text" ng-model="contact.last_name" />
+      </div>
+
+      <div class="g-field genders">
+        <label>Gender</label>
+        <div class="genders__options">
+          <div ng-repeat="genderItem in genders">
+            <input type="radio"
+                   id="{{genderItem.value}}"
+                   name="gender"
+                   ng-required="true"
+                   value="{{ genderItem.value }}"
+                   ng-model="contact.gender">
+            <label ng-bind="genderItem.label" for="{{genderItem.value}}"></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-field">
+        <label>Email</label>
+        <input type="email"
+               ng-required="true"
+               name="email"
+               ng-maxlength="50"
+               ng-model="contact.email" />
+      </div>
+
+      <div class="g-field">
+        <label>Phone</label>
+        <input name="phone"
+               ng-required="true"
+               type="number"
+               ng-model="contact.phone" />
+      </div>
+    </form>
+
+    <div class="actions">
+      <button ng-click="submit()">Save</button>
+    </div>
+
+    <div class="card-actions">
+      <a href="#!/contact-list">Contact List</a>
+    </div>
+  </div>
+</section>

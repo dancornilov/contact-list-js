@@ -1,0 +1,17 @@
+<section ng-controller="ContactCardCtrl">
+  <div class="card">
+    <div class="card-container">
+      <h1> {{ contact | fullName }}</h1>
+
+      <div>
+        <span>Email:</span>
+        <a href="mailto: {{ contact.email }}" ng-bind="contact.email"></a>
+      </div>
+
+      <div class="card-actions">
+        <a href="#!/contact-detail"> New Contact</a>
+        <a href="#!/contact-list"> Contact List</a>
+      </div>
+    </div>
+  </div>
+</section>

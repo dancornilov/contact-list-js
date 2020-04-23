@@ -1,0 +1,13 @@
+<section ng-controller="ContactListCtrl" class="card">
+  <div class="card-container">
+    <h2>Contact List</h2>
+
+    <ul class="contact-list" ng-show="contacts">
+      <li ng-repeat="contact in contacts">
+        <a href="#!/view/{{contact.created_at}}">
+          {{ contact | fullName }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

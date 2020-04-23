@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../contact-management/.idea/contact-management.iml" filepath="$PROJECT_DIR$/../contact-management/.idea/contact-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/contact-management-js.iml" filepath="$PROJECT_DIR$/.idea/contact-management-js.iml" />
+    </modules>
+  </component>
+</project>
